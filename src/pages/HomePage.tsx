@@ -108,7 +108,7 @@ const fetchMetrics = async () => {
                     Loading metrics...
                 </div>
               ) : (
-                <div className="mt-50 max-md:mt-20">
+                <div className="mt-30 xl:pt-20 md:pt-30 max-md:pt-30  ">
                   <Metrics metrics = {metrics  || [] } />
                 </div> 
             )}

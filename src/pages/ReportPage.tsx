@@ -79,7 +79,7 @@ export const performanceData = [
 const ReportPage = () => {
   return (
    <>
-      <div className=" fixed w-full bg-[var(--brand-50)] flex gap-4 items-center  px-4 py-4 border-b border-[var(--brand-600)] ">
+      <div className="  w-full bg-[var(--brand-50)] flex gap-4 items-center  px-4 py-4 border-b border-[var(--brand-600)] ">
         <div className="flex flex-col gap-6 mt-5  xl:flex-row xl:justify-between xl:items-center w-full">
           <div className="">
             <div className="mt-3 max-w-22 dark:bg-[var(--brand-500)] rounded px-4 "><NavBar /></div>
@@ -92,7 +92,7 @@ const ReportPage = () => {
       </div>
 
       <div>
-          <div className="pt-30 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4 mt-20">
+          <div className="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-4 mt-10">
             {summaryData.map((data)=>(
                 <div key={data.title} className="bg-white  p-4 m-2 rounded-lg shadow-md text-center mt-6">
                     <h2 className="text-lg text-[var(--brand-400)] mb-3 font-semibold">{data.title}</h2>
