@@ -58,7 +58,7 @@ function AppRadialChart() {
   const totalVisitors = chartData[0].desktopVisibility/10 + chartData[0].mobileVisibility/10;
 
   return (
-    <Card className="flex flex-col max-md:p-5 mx-10 bg-gray-900">
+    <Card className="flex flex-col max-md:p-5 mx-10 dark:bg-gray-900 border-0">
       <CardHeader className="items-center ">
         <CardTitle>Site Optimization</CardTitle>
         <CardDescription>LLM visibility optimization status</CardDescription>
@@ -125,12 +125,12 @@ function AppRadialChart() {
 
         <div className="flex flex-col  gap-4 px-4 ">
           {statusData.map((status) => (
-            <div key={status.title} className="p-4 flex justify-between items-center border rounded-2xl border-#fff text-sm">
+            <div key={status.title} className="p-4 flex justify-between items-center border-2 rounded-2xl border-[var(--brand-700)] text-sm">
               <div className="flex gap-4 items-center">
                  <p> {status.icon}</p>
                  <span className="text-muted-foreground">{status.title}</span>
               </div>
-                <p className="p-2 border rounded-2xl border-#fff font-medium">{status.value}</p>
+                <p className="p-2 border-2 rounded-2xl border-[var(--brand-100)] font-medium">{status.value}</p>
             </div>
           ))}
         </div>

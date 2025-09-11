@@ -49,17 +49,17 @@ const AppBarChart = () => {
 
 
   return (
-    <div className=" bg-gray-900 p-10 xl:w-[60%]  flex-col   ">
-            <div className="flex w-full justify-around bg-gray-800 rounded-2xl items-center p-2  gap-4 mb-10">
-                <button className={`text-white p-2 rounded-3xl text-sm transition-all duration-300 ease-in-out ${isActive === "v & p" ? "bg-blue-800 w-[50%] scale-110 shadow-lg border px-4" : "hover:scale-105  hover:bg-gray-700 px-4"}`} onClick={()=>setIsActive('v & p')}>
+    <div className="  p-10 xl:w-[60%]  flex-col   ">
+            <div className="flex w-full justify-around bg-[var(--brand-accent)] rounded-2xl items-center p-2  gap-4 mb-10">
+                <button className={`text-[var(--brand-50)] p-2 rounded-3xl text-sm transition-all duration-300 ease-in-out ${isActive === "v & p" ? "bg-[var(--brand-50)] text-[var(--brand-950)] dark:bg-[var(--brand-950)] dark:text-[var(--brand-50)] w-[50%] scale-110 shadow-lg  px-4" : "hover:scale-105  hover:bg-gray-700 px-4"}`} onClick={()=>setIsActive('v & p')}>
                     Visibility & Presence
                 </button>
-                <button className={`text-white p-2 rounded-3xl text-sm transition-all duration-300 ${isActive === "m & c" ? "bg-blue-800 scale-110 w-[50%] shadow-lg border px-4 " : "hover:scale-105 hover:bg-gray-700 px-4" }`} onClick={()=>setIsActive('m & c')}>
+                <button className={` text-[var(--brand-50)] p-2 rounded-3xl text-sm transition-all duration-300 ${isActive === "m & c" ? "bg-[var(--brand-50)] text-[var(--brand-950)] dark:bg-[var(--brand-950)] dark:text-[var(--brand-50)] w-[50%] scale-110 shadow-lg  px-4 " : "hover:scale-105 hover:bg-gray-700 px-4" }`} onClick={()=>setIsActive('m & c')}>
                     Mentions & Citations
                 </button>
             </div>
 
-      <Card className="bg-gray-950" >
+      <Card className="dark:bg-[var(--brand-950)] bg-[#e4e2e2] border-0" >
         {isActive === 'v & p' && (
           <CardContent>
             <ChartContainer config={chartConfig}>
@@ -76,7 +76,8 @@ const AppBarChart = () => {
                      value: "Presence & Visibility Score",
                      angle: -90,
                      position: "insideLeft",
-                     style: { textAnchor: "middle" },
+                     style: {  textAnchor: "middle" },
+                     
                    }}
                  />
                 <CartesianGrid vertical={false} />
@@ -91,7 +92,7 @@ const AppBarChart = () => {
                 <Line
                   dataKey='presence'
                   type="monotone"
-                  stroke="var(--color-desktop)"
+                  stroke="var(--brand-500)"
                   strokeWidth={2}
                   dot={false}
                 />
@@ -130,8 +131,8 @@ const AppBarChart = () => {
                   <CartesianGrid vertical={false} />
                   <XAxis
                     dataKey="month"
-                    tickLine={false}
-                    axisLine={false}
+                    tickLine={true}
+                    axisLine={true}
                     tickMargin={8}
                     tickFormatter={(value) => value.slice(0, 3)}
                   />
@@ -139,7 +140,7 @@ const AppBarChart = () => {
                   <Line
                     dataKey='mentions'
                     type="monotone"
-                    stroke="var(--color-desktop)"
+                    stroke="var(--brand-500)"
                     strokeWidth={2}
                     dot={false}
                   />
@@ -157,7 +158,7 @@ const AppBarChart = () => {
 
           <CardFooter>
                 <p className="mx-auto text-green-500 font-sm">
-                  Presence % - <span className="text-white">Visibility Score </span>
+                  Presence % - <span className="text-[var(--brand-500)]">Visibility Score </span>
                 </p>
           </CardFooter>
         </Card>

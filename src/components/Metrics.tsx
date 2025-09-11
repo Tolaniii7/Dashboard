@@ -27,7 +27,7 @@ const Metrics = ({metrics  }: Props) => {
                   return ((present_score - previous_score) / previous_score) * 100;
              };
             return(
-                  <div className="w-full rounded-2xl border border-#fff p-4 mt-4 flex-col  justify-center transition-transform duration-300 ease-in-out hover:-translate-y-3 hover:shadow-lg" >
+                  <div className="w-full rounded-2xl border  bg-[var(--brand-50)] dark:bg-[var(--brand-500)] border-#fff p-4 mt-4 flex-col  justify-center transition-transform duration-300 ease-in-out hover:-translate-y-3 hover:shadow-lg" >
                       <div className="flex justify-between items-center gap-2 p-2 mb-6">
                             <div  className="text-blue-500">{title === "Visibility Score" && <EyeIcon />}
                                  {title === "Presence Score" && <Globe />}
@@ -42,13 +42,13 @@ const Metrics = ({metrics  }: Props) => {
                             </p>
                       </div>  
                       <div>
-                            <p className="text-2xl font-bold text-white">
+                            <p className="text-2xl font-bold dark:text-[var(--brand-100)] text-[var(--brand-900)]">
                                 {title === 'Mentions' && present_score }
                                 {title === 'Presence Score' && `${present_score % 100}%` }
                                 {title === 'Visibility Score' && (present_score / 10).toFixed(1) }
                                 {title === 'Average Rank' && (present_score/10).toFixed(1) }
                             </p>
-                            <p className="font-normal  text-#fff text-sm">{title}</p> 
+                            <p className=" dark:text-[var(--brand-100)] text-[var(--brand-950)] font-semibold text-sm">{title}</p> 
                       </div>
                   </div>
             )})}   
@@ -57,8 +57,8 @@ const Metrics = ({metrics  }: Props) => {
             {/* Tab Components */}
         <div className="p-4">
             <div  className="p-4 mt-6 flex flex-col  gap-1 items-start justify-start mx-4">
-                <h1 className="font-semibold text-2xl">Visibility & Presence Trends</h1>
-                <p className="font-semibold ">Track your brand's performance across AI models over the last 7 days</p>
+                <h1 className="font-semibold text-[var(--brand-50)]  text-2xl">Visibility & Presence Trends</h1>
+                <p className="font-semibold text-[var(--brand-100)] ">Track your brand's performance across AI models over the last 7 days</p>
             </div>
 
             <div className="xl:flex xl:justify-around xl:items-center max-md:flex-col max-md:mx-auto">

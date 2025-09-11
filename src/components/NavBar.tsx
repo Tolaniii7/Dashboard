@@ -15,7 +15,7 @@ const NavBar = () => {
         <SidebarTrigger/>
        </div> 
 
-        <div>
+        <div >
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="outline" size="icon">

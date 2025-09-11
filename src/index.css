@@ -1,7 +1,27 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @custom-variant dark (&:is(.dark *));
+
+@layer base {
+  :root {
+    --brand-50: #f3f7fb;
+    --brand-100: #e2edf5;
+    --brand-200: #c6dbeb;
+    --brand-300: #a2c4dd;
+    --brand-400: #71a0c3;
+    --brand-500: #5083aa;
+    --brand-600: #3e698d;
+    --brand-700: #365877;
+    --brand-800: #2f475f;
+    --brand-900: #283b4f;
+    --brand-950: #1c2738;
+    --brand-accent: #2054a0;
+  }
+}
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -79,6 +99,7 @@
   --bg-sidebar: oklch(22.659% 0.0804 265.895);
 }
 
+
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
@@ -114,6 +135,7 @@
   --bg-sidebar: oklch(0.488 0.243 264.376);
 
 }
+
 
 @layer base {
   * {

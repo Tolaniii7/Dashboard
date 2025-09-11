@@ -76,38 +76,39 @@ const fetchMetrics = async () => {
 
   return (
     <section  className=' w-full'>
-      <nav className='fixed top-0 w-full z-1 shadow-md bg-gray-900 p-4 flex flex-col justify-between items-start '>
+      <nav className='fixed top-0 w-full z-1 shadow-md bg-[var(--brand-accent)] p-2 flex flex-col justify-between items-start '>
         <div>
-        <div>
-          <NavBar />
-        </div>
-
-            <div className="flex justify-between items-center p-4 w-full"> 
-              <div className="p-2"> 
-                <h2 className="text-3xl font-bold">Dashboard</h2>
-                <p className="text-sm text-white-300 ">Monitor your brands's visibility across AI models</p>
+              <div>
+                <NavBar />
               </div>
 
-              <div className="flex justify-center items-center md:flex-row flex-col gap-4">
-                <Button onClick={handleLoad} className="w-20 rounded-2xl text-fff bg-blue-400" >Live Data</Button>
-                <Button className="w-40 p-[2rem]  bg-blue-600 text-[18px] text-white"><ArrowBigDownIcon/> Export Report</Button>
-              </div>    
-            </div>
-            </div>
+              <div className="flex justify-between xl:gap-10 max-md:gap-5 items-center p-4 w-full"> 
+                <div > 
+                  <h2 className="text-3xl text-[var(--brand-100)] dark:text-[#fff] font-extrabold">Dashboard</h2>
+                  <p className="text-sm max-sm:w-[80%] md:w-[80%] text-[var(--brand-100)] dark:text-[#fff] font-semibold ">Monitor your brands's visibility across AI models</p>
+                </div>
+
+                <div className="flex justify-center items-center flex-col  xl:flex-row  gap-5">
+                  <Button onClick={handleLoad} className="w-20 rounded-2xl dark:bg-[var(--brand-50)]  bg-[black] text-[var(--brand-50)] dark:text-[var(--brand-700)] font-semibold" >Live Data</Button>
+                  <Button className="w-40 p-[2rem] text-center bg-[var(--brand-50)]  dark:bg-[var(--brand-950)]  text-[18px] text-[var(--brand-700)] dark:text-[var(--brand-100)] font-semibold"><ArrowBigDownIcon/> Export Report</Button>
+                </div>   
+              </div>
+        </div>
+            {/* <div className="w-full  bg-white h-px  " /> */}
+
       </nav> 
-            <div className="w-full bg-white h-px  " />
                 {!metrics.length && !isLoading && (
-                  <div className=" text-center py-10 text-lg font-semibold">
+                  <div className=" text-center mx-3 pt-10 mt-50 text-3xl text-[var(--brand-100)] dark:text-[#fff] font-extrabold">
                     No metrics available. Click "Live Data" to generate metrics.
                   </div>
                 )}
 
             { isLoading ?
-              (<div className="text-center py-10 text-lg font-semibold">
+              (<div className="text-center mt-100  text-lg font-semibold">
                     Loading metrics...
                 </div>
               ) : (
-                <div className="mt-40 max-md:mt-50">
+                <div className="mt-50 max-md:mt-20">
                   <Metrics metrics = {metrics  || [] } />
                 </div> 
             )}
