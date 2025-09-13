@@ -58,7 +58,7 @@ function AppRadialChart() {
   const totalVisitors = chartData[0].desktopVisibility/10 + chartData[0].mobileVisibility/10;
 
   return (
-    <Card className="flex flex-col max-md:p-5 mx-10 dark:bg-gray-900 border-0">
+    <Card className="flex xl:w-[40%] flex-col max-md:p-5 mx-10 dark:bg-gray-900 border-0">
       <CardHeader className="items-center ">
         <CardTitle>Site Optimization</CardTitle>
         <CardDescription>LLM visibility optimization status</CardDescription>

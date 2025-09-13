@@ -61,7 +61,7 @@ const Metrics = ({metrics  }: Props) => {
                 <p className="font-semibold text-[var(--brand-100)] ">Track your brand's performance across AI models over the last 7 days</p>
             </div>
 
-            <div className="xl:flex xl:justify-around xl:items-center max-md:flex-col max-md:mx-auto">
+            <div className="xl:flex mt-10 xl:justify-around xl:items-center max-md:flex-col max-md:mx-auto">
                 <AppBarChart />
                 <AppRadialChart/>
             </div>                        

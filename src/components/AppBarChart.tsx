@@ -49,7 +49,7 @@ const AppBarChart = () => {
 
 
   return (
-    <div className="  p-10 xl:w-[60%]  flex-col   ">
+    <div className="  p-10 xl:w-[50%]  flex-col   ">
             <div className="flex w-full justify-around bg-[var(--brand-accent)] rounded-2xl items-center p-2  gap-4 mb-10">
                 <button className={`text-[var(--brand-50)] p-2 rounded-3xl text-sm transition-all duration-300 ease-in-out ${isActive === "v & p" ? "bg-[var(--brand-50)] text-[var(--brand-950)] dark:bg-[var(--brand-950)] dark:text-[var(--brand-50)] w-[50%] scale-110 shadow-lg  px-4" : "hover:scale-105  hover:bg-gray-700 px-4"}`} onClick={()=>setIsActive('v & p')}>
                     Visibility & Presence
@@ -59,7 +59,7 @@ const AppBarChart = () => {
                 </button>
             </div>
 
-      <Card className="dark:bg-[var(--brand-950)] bg-[#e4e2e2] border-0" >
+      <Card className="dark:bg-[var(--brand-950)]  bg-[#e4e2e2] border-0" >
         {isActive === 'v & p' && (
           <CardContent>
             <ChartContainer config={chartConfig}>

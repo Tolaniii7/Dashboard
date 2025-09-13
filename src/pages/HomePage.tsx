@@ -82,15 +82,15 @@ const fetchMetrics = async () => {
                 <NavBar />
               </div>
 
-              <div className="flex justify-between xl:gap-10 max-md:gap-5 items-center p-4 w-full"> 
+              <div className="flex justify-between xl:gap-10 max-md:gap-5 items-center p-2 w-full"> 
                 <div > 
                   <h2 className="text-3xl text-[var(--brand-100)] dark:text-[#fff] font-extrabold">Dashboard</h2>
                   <p className="text-sm max-sm:w-[80%] md:w-[80%] text-[var(--brand-100)] dark:text-[#fff] font-semibold ">Monitor your brands's visibility across AI models</p>
                 </div>
 
-                <div className="flex justify-center items-center flex-col  xl:flex-row  gap-5">
+                <div className="flex justify-center  items-center flex-col  xl:flex-row  gap-5">
                   <Button onClick={handleLoad} className="w-20 rounded-2xl dark:bg-[var(--brand-50)]  bg-[black] text-[var(--brand-50)] dark:text-[var(--brand-700)] font-semibold" >Live Data</Button>
-                  <Button className="w-40 p-[2rem] text-center bg-[var(--brand-50)]  dark:bg-[var(--brand-950)]  text-[18px] text-[var(--brand-700)] dark:text-[var(--brand-100)] font-semibold"><ArrowBigDownIcon/> Export Report</Button>
+                  <Button className="w-40  p-8 text-center bg-[var(--brand-50)]  dark:bg-[var(--brand-950)]  text-[18px] text-[var(--brand-700)] dark:text-[var(--brand-100)] font-semibold"><ArrowBigDownIcon/> Export Report</Button>
                 </div>   
               </div>
         </div>
